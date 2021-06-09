@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập về nhà</title>
+</head>
+<body>
+    <button onclick="bai1()">Bài 1</button>
+    <button onclick="bai2()">Bài 2</button>
+    <button onclick="bai3()">Bài 3</button>
+    <script>
+        function bai1()
+        {
+            let dai=prompt("Nhập chiều dài")
+            let rong=prompt("Nhập chiều rộng")
+            alert("Chu vi hình chữ nhật là " + [Number(dai)+Number(rong)]*2 )
+            alert("Diện tích hình chữ nhật là " + Number(dai)*Number(rong))
+        }
+
+        function bai3()
+        {
+            let nam = prompt("Nhập số năm")
+            if (Number(nam) % 4 == 0)
+            {
+                alert("Năm " + Number(nam) + " là năm nhuận")
+            }
+            else
+            {
+                alert("Năm " + Number(nam) +" không phải là năm nhuận")
+            }
+        }
+
+        function bai2()
+        {
+            let ax = prompt("Nhập số thứ nhất")
+            let bx = prompt("Nhập số thứ hai")
+            let a = ax
+            let b = bx
+            let t = Number(a) % Number(b)
+            while (t=0)
+            {
+             t = a % b
+             a = b
+             b = t
+            }
+            let ucln = a
+            let bcnn = ax * bx / ucln
+            alert("BCNN của hai số đó là: " + Number(bcnn))
+            alert("Con ƯCLN của hai số đó là: " + Number(ucln))
+            console.log(bcnn)
+            console.log(ucln)
+        }
+        
+    </script>
+    <p>Kết quả bài 1</p><br>
+    <p id="kq1"> </p>
+</body>
+</html>
